@@ -58,9 +58,9 @@ function allWagesFor (employeeRecord) {
     return amount
 }
 
-function calculatePayroll (employeeRecords) {
-    return employeeRecords.reduce(
-        function (total, allEmployees) {
-            return total + allWagesFor(allEmployees)
-        },0)
+function calculatePayroll (array) {
+    return array.reduce(
+        function (accumulator, name) {
+            return accumulator+allWagesFor(name)
+        }, 0)
 }
